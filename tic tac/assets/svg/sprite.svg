@@ -1,0 +1,16 @@
+<svg width="0" height="0" class="hidden">
+  <symbol version="1.1" id="circle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" xml:space="preserve" viewBox="0 0 16 16">
+    <g>
+      <path d="M8,0C3.582,0,0,3.582,0,8s3.582,8,8,8s8-3.582,8-8S12.418,0,8,0z M8,15c-3.866,0-7-3.134-7-7
+		s3.134-7,7-7s7,3.134,7,7S11.866,15,8,15z"></path>
+    </g>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="cross">
+    <defs></defs>
+    <title></title>
+    <g id="Layer_2">
+      <path d="M4,29a1,1,0,0,1-.71-.29,1,1,0,0,1,0-1.42l24-24a1,1,0,1,1,1.42,1.42l-24,24A1,1,0,0,1,4,29Z"></path>
+      <path d="M28,29a1,1,0,0,1-.71-.29l-24-24A1,1,0,0,1,4.71,3.29l24,24a1,1,0,0,1,0,1.42A1,1,0,0,1,28,29Z"></path>
+    </g>
+  </symbol>
+</svg>

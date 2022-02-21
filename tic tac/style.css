@@ -1,0 +1,307 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  background-color: #000;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article>*+* {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Начало основных стилей */
+.main {
+  height: calc(100vh - 75px);
+  background-color: azure;
+}
+
+.modal-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 3px 5px;
+  font-size: 18px;
+  border-color: #3498db;
+  color: #fff;
+  box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+
+.modal-btn:hover {
+  box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+  color: #000;
+}
+
+.modal {
+  display: none;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #a9d1dd;
+  /* 15% сверху и по центру */
+  padding: 20px 20px 30px 40px;
+  border: 1px solid rgb(97, 157, 180);
+  width: 400px;
+  z-index: 2;
+}
+
+.title-modal {
+  display: flex;
+  justify-content: center;
+  color: black;
+  font-size: 25px;
+  font-weight: 700;
+  padding-top: 10px;
+}
+
+p {
+  color: black;
+  font-size: 18px;
+  font-weight: 500;
+  padding-top: 10px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.close {
+  width: 20px;
+  height: 20px;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  /* Черный с непрозрачностью */
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  color: black;
+  font-size: 45px;
+  font-weight: 900;
+  padding-top: 40px;
+  text-align: center;
+}
+
+.step {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 40px;
+  font-weight: 900;
+  padding-top: 10px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+@media (max-width: 630px) {
+  .title {
+    font-size: 38px;
+  }
+  .step {
+    font-size: 32px;
+  }
+}
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 10px 15px;
+  font-size: 25px;
+  border-color: #3498db;
+  color: #fff;
+  box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+
+.button:hover {
+  box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+  color: #000;
+}
+
+.box .circle {
+  padding: 10px;
+  display: none;
+  width: 150px;
+  height: 150px;
+}
+
+.box .cross {
+  display: none;
+  width: 150px;
+  height: 150px;
+}
+
+.box.cross--active .cross {
+  display: flex;
+}
+
+.box.circle--active .circle {
+  display: flex;
+}
+
+.boxes {
+  width: 450px;
+  display: none;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  border: solid 1px;
+}
+
+/* Стили для footer */
+
+
+.footer {
+  height: 75px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+  background-color: #a9d1dd;
+  padding: 15px 0 0;
+}
+
+.rsschool {
+  margin: 0;
+  width: 120px;
+}
+
+.date {
+  font-size: 40px;
+  font-weight: 600;
+  align-self: flex-end;
+  margin: 0;
+}
+
+.github_img {
+  margin: 0;
+  width: 50px;
+}
+
+@media (max-width: 520px) {
+  .title {
+    font-size: 32px;
+    padding-top: 60px;
+  }
+  .step {
+    font-size: 28px;
+  }
+  .boxes {
+    width: 300px;
+  }
+  .box {
+    width: 100px;
+    height: 100px;
+  }
+  .box .circle {
+    padding: 4px 4px 4px 2px;
+    width: 100px;
+    height: 100px;
+  }
+  .box .cross {
+    width: 100px;
+    height: 100px;
+  }
+  .date {
+    font-size: 30px;
+  }
+  .modal {
+    padding: 10px 20px;
+    width: 300px;
+  }
+  .title-modal {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  p {
+    font-size: 17px;
+    font-weight: 400;
+    padding-top: 5px;
+  }
+}
